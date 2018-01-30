@@ -1,29 +1,29 @@
 {
-  "name": "headless-byteball",
-  "description": "Byteball headless wallet",
-  "author": "Byteball",
+  "name": "headless-GAEA",
+  "description": "GAEA headless wallet",
+  "author": "GAEA",
   "version": "0.1.9",
   "main": "start.js",
   "keywords": [
     "wallet",
     "headless",
-    "byteball",
+    "GAEA",
     "full node"
   ],
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/byteball/headless-byteball.git",
+    "url": "git://github.com/GAEA/headless-GAEA.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/byteball/headless-byteball/issues"
+    "url": "https://github.com/GAEA/headless-GAEA/issues"
   },
   "browser": {
     "request": "browser-request",
     "secp256k1": "secp256k1/js"
   },
   "dependencies": {
-    "byteballcore": "^0.2.9",
+    "GAEAcore": "^0.2.9",
     "bitcore-lib": "^0.13.14",
     "bitcore-mnemonic": "~1.0.0",
     "json-rpc2": "^1.0.2"

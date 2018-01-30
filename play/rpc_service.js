@@ -3,31 +3,31 @@
 /*
 	Accept commands via JSON-RPC API.
 	The daemon listens on port 6332 by default.
-	See https://github.com/byteball/headless-byteball/wiki/Running-RPC-service for detailed description of the API
+	See https://github.com/GAEA/headless-GAEA/wiki/Running-RPC-service for detailed description of the API
 */
 
 "use strict";
 var headlessWallet = require('../start.js');
-var conf = require('byteballcore/conf.js');
-var eventBus = require('byteballcore/event_bus.js');
-var db = require('byteballcore/db.js');
-var mutex = require('byteballcore/mutex.js');
-var storage = require('byteballcore/storage.js');
-var constants = require('byteballcore/constants.js');
-var validationUtils = require("byteballcore/validation_utils.js");
+var conf = require('GAEAcore/conf.js');
+var eventBus = require('GAEAcore/event_bus.js');
+var db = require('GAEAcore/db.js');
+var mutex = require('GAEAcore/mutex.js');
+var storage = require('GAEAcore/storage.js');
+var constants = require('GAEAcore/constants.js');
+var validationUtils = require("GAEAcore/validation_utils.js");
 var wallet_id;
 
 if (conf.bSingleAddress)
 	throw Error('can`t run in single address mode');
 
 function initRPC() {
-	var composer = require('byteballcore/composer.js');
-	var network = require('byteballcore/network.js');
+	var composer = require('GAEAcore/composer.js');
+	var network = require('GAEAcore/network.js');
 
 	var rpc = require('json-rpc2');
-	var walletDefinedByKeys = require('byteballcore/wallet_defined_by_keys.js');
-	var Wallet = require('byteballcore/wallet.js');
-	var balances = require('byteballcore/balances.js');
+	var walletDefinedByKeys = require('GAEAcore/wallet_defined_by_keys.js');
+	var Wallet = require('GAEAcore/wallet.js');
+	var balances = require('GAEAcore/balances.js');
 
 	var server = rpc.Server.$create({
 		'websocket': true, // is true by default 

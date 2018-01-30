@@ -1,9 +1,9 @@
 /*jslint node: true */
 "use strict";
 var headlessWallet = require('../start.js');
-var eventBus = require('byteballcore/event_bus.js');
-var mail = require('byteballcore/mail.js');
-var conf = require('byteballcore/conf.js');
+var eventBus = require('GAEAcore/event_bus.js');
+var mail = require('GAEAcore/mail.js');
+var conf = require('GAEAcore/conf.js');
 
 const asset = null;
 const amount = 1000;
